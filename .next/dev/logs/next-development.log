@@ -1,0 +1,30 @@
+[00:00:01.703] Server  LOG      ✓ Ready in 1077ms
+[00:00:09.251] Server  LOG      ○ Compiling / ...
+[00:00:10.736] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:00:11.050] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:00:11.050] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"o":"http://localhost:3000/","r":"","sdkn":"@vercel/analytics/react","sdkv":"1.5.0","sv":"0.1.3","ts":1763650748957}
+[00:01:49.232] Server  LOG      ✓ Compiled in 144ms
+[00:02:57.301] Server  WARN     ⚠ Fast Refresh had to perform a full reload when ./OneDrive/Área de Trabalho/saunk-linktree/components/audio-provider.tsx changed. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+[00:02:57.321] Server  LOG      ✓ Compiled in 132ms
+[00:02:58.423] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:02:58.974] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:02:58.974] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"o":"http://localhost:3000/","sdkn":"@vercel/analytics/react","sdkv":"1.5.0","sv":"0.1.3","ts":1763650916656}
+[00:05:19.489] Server  WARN     ⚠ Fast Refresh had to perform a full reload when ./OneDrive/Área de Trabalho/saunk-linktree/components/audio-provider.tsx changed. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+[00:05:20.159] Server  LOG      ✓ Compiled in 131ms
+[00:05:20.571] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:05:20.979] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:05:20.979] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"o":"http://localhost:3000/","sdkn":"@vercel/analytics/react","sdkv":"1.5.0","sv":"0.1.3","ts":1763651058853}
+[00:05:34.717] Server  WARN     ⚠ Fast Refresh had to perform a full reload when ./OneDrive/Área de Trabalho/saunk-linktree/components/audio-provider.tsx changed. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+[00:05:35.282] Server  LOG      ✓ Compiled in 109ms
+[00:05:35.589] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:05:35.983] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:05:35.983] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"o":"http://localhost:3000/","sdkn":"@vercel/analytics/react","sdkv":"1.5.0","sv":"0.1.3","ts":1763651073780}
+[00:06:06.547] Server  WARN     ⚠ Fast Refresh had to perform a full reload when ./OneDrive/Área de Trabalho/saunk-linktree/components/audio-provider.tsx changed. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+[00:06:07.163] Server  LOG      ✓ Compiled in 121ms
+[00:06:07.441] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:06:07.973] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:06:07.973] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"o":"http://localhost:3000/","sdkn":"@vercel/analytics/react","sdkv":"1.5.0","sv":"0.1.3","ts":1763651105614}
+[00:06:20.465] Server  LOG      ✓ Compiled in 118ms
+[00:06:26.902] Server  LOG      ✓ Compiled in 115ms
+[00:06:29.205] Server  LOG      ✓ Compiled in 91ms
+[00:06:32.911] Server  LOG      ✓ Compiled in 140ms
