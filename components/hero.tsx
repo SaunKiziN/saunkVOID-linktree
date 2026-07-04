@@ -3,14 +3,10 @@
 import React, { useState, useEffect } from "react";
 import { ChevronDown } from "lucide-react";
 import Image from "next/image";
-import { useAudio } from "./audio-provider";
 
 export function Hero() {
   const [isHovering, setIsHovering] = useState(false);
   const [isMounted, setIsMounted] = useState(false);
-
-  const { playHoverSound, isSfxEnabled, toggleSfx, startBackgroundMusic } =
-    useAudio();
 
   useEffect(() => {
     setIsMounted(true);
@@ -36,14 +32,6 @@ export function Hero() {
 
     html.style.overflow = "";
     body.style.overflow = "";
-
-    if (!isSfxEnabled) toggleSfx();
-
-    // start's music (with fade, if active)
-    startBackgroundMusic();
-
-    // interact sound
-    playHoverSound();
 
     const linksSection = document.getElementById("links-section");
     if (linksSection) {
@@ -109,7 +97,7 @@ export function Hero() {
                    hover:shadow-[0_0_25px_rgba(255,255,255,0.35)]"
       >
         ENTER THE VOID
-        <ChevronDown className="w-5 h-5 animate-bounce" />
+        <ChevronDown className="w-5 h-5 animate-bounce" aria-hidden="true" />
       </button>
     </section>
   );

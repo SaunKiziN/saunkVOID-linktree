@@ -9,7 +9,7 @@ export function SoundToggle() {
   const { isSfxEnabled, isMusicEnabled, toggleSfx, toggleMusic } = useAudio();
 
   return (
-    <div className="fixed bottom-6 right-6 z-50 flex flex-col gap-3">
+    <div className="fixed bottom-6 right-6 z-50 flex flex-row gap-3 sm:flex-col">
       <button
         onClick={toggleSfx}
         className="p-3 rounded-full border border-white/30 

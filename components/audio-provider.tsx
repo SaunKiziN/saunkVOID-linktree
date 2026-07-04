@@ -33,7 +33,7 @@ const DEFAULT_VOLUME = 0.25;
 
 export function AudioProvider({ children }: { children: React.ReactNode }) {
   const [isSfxEnabled, setIsSfxEnabled] = useState(true);
-  const [isMusicEnabled, setIsMusicEnabled] = useState(true);
+  const [isMusicEnabled, setIsMusicEnabled] = useState(false);
 
   const audioCtxRef = useRef<AudioContext | null>(null);
   const bgAudioRef = useRef<HTMLAudioElement | null>(null);
@@ -144,27 +144,30 @@ export function AudioProvider({ children }: { children: React.ReactNode }) {
     []
   );
 
-  const startBackgroundMusic = useCallback(() => {
-    let audio = bgAudioRef.current;
+  const getBackgroundAudio = useCallback(() => {
+    if (typeof window === "undefined") return null;
 
-    if (!audio) {
-      audio = new Audio(BG_MUSIC_SRC);
+    if (!bgAudioRef.current) {
+      const audio = new Audio(BG_MUSIC_SRC);
       audio.loop = true;
       audio.volume = 0;
       bgAudioRef.current = audio;
     }
 
+    return bgAudioRef.current;
+  }, []);
+
+  const startBackgroundMusic = useCallback(() => {
+    if (!isMusicEnabled) return;
+
+    const audio = getBackgroundAudio();
+    if (!audio) return;
+
     audio
       .play()
-      .then(() => {
-        if (isMusicEnabled) {
-          fadeTo(DEFAULT_VOLUME);
-        } else {
-          fadeTo(0);
-        }
-      })
+      .then(() => fadeTo(DEFAULT_VOLUME))
       .catch(() => {});
-  }, [fadeTo, isMusicEnabled]);
+  }, [fadeTo, getBackgroundAudio, isMusicEnabled]);
 
   const toggleSfx = useCallback(() => {
     setIsSfxEnabled((prev) => !prev);
@@ -173,19 +176,13 @@ export function AudioProvider({ children }: { children: React.ReactNode }) {
   const toggleMusic = useCallback(() => {
     setIsMusicEnabled((prev) => {
       const next = !prev;
-      const audio = bgAudioRef.current;
 
-      if (!audio) {
-        // if the music hasn't started yet (before Enter), just store the intention
-        return next;
-      }
+      if (next) {
+        const audio = getBackgroundAudio();
+        if (!audio) return next;
 
-      if (!next) {
-        // stop music, fade out and PAUSE
-        fadeTo(0, { pauseOnEnd: true });
-      } else {
-        // turn on music and fade in
         if (audio.paused) {
+          audio.volume = 0;
           audio
             .play()
             .then(() => fadeTo(DEFAULT_VOLUME))
@@ -193,11 +190,13 @@ export function AudioProvider({ children }: { children: React.ReactNode }) {
         } else {
           fadeTo(DEFAULT_VOLUME);
         }
+      } else {
+        fadeTo(0, { pauseOnEnd: true });
       }
 
       return next;
     });
-  }, [fadeTo]);
+  }, [fadeTo, getBackgroundAudio]);
 
   // fade when tab visibility changes
   useEffect(() => {
