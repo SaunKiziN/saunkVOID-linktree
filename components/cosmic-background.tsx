@@ -24,6 +24,7 @@ export function CosmicBackground() {
 
     const particleContainer = document.createElement("div");
     particleContainer.className = "fixed inset-0 pointer-events-none z-0";
+    particleContainer.setAttribute("aria-hidden", "true");
 
     for (let i = 0; i < 50; i++) {
       const particle = document.createElement("div");
@@ -43,15 +44,18 @@ export function CosmicBackground() {
     const leftOrnament = document.createElement("div");
     leftOrnament.className =
       "fixed left-4 top-32 text-white opacity-20 text-2xl pointer-events-none z-0";
+    leftOrnament.setAttribute("aria-hidden", "true");
     leftOrnament.textContent = "∞ ◈ ∞ ◈ ∞";
 
     const rightOrnament = document.createElement("div");
     rightOrnament.className =
       "fixed right-4 top-32 text-white opacity-20 text-2xl pointer-events-none z-0";
+    rightOrnament.setAttribute("aria-hidden", "true");
     rightOrnament.textContent = "∞ ◈ ∞ ◈ ∞";
 
     const galaxies = document.createElement("div");
     galaxies.className = "fixed inset-0 pointer-events-none z-0";
+    galaxies.setAttribute("aria-hidden", "true");
     for (let i = 0; i < 3; i++) {
       const galaxy = document.createElement("div");
       galaxy.className = "galaxy pointer-events-none";
@@ -93,6 +97,7 @@ export function CosmicBackground() {
         ref={svgRef}
         className="fixed inset-0 w-full h-full opacity-30 pointer-events-none -z-10"
         preserveAspectRatio="xMidYMid slice"
+        aria-hidden="true"
       >
         <defs>
           <filter id="glow">
