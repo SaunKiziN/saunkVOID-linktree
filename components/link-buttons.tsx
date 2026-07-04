@@ -3,7 +3,6 @@
 import React from "react";
 import Link from "next/link";
 import { useAudio } from "./audio-provider";
-import { SoundToggle } from "./sound-toggle";
 
 const links = [
   { label: "Instagram", url: "https://instagram.com/samlxzz", icon: "☷" },
@@ -26,8 +25,6 @@ export function LinkButtons() {
       id="links-section"
       className="relative z-20 py-12 px-4 max-w-2xl mx-auto"
     >
-      <SoundToggle />
-
       <div className="space-y-4">
         {links.map((link) => (
           <Link
@@ -40,7 +37,10 @@ export function LinkButtons() {
             onClick={playClickSound}
           >
             <span className="inline-flex items-center gap-3">
-              <span className="text-lg opacity-70 group-hover:opacity-100 transition-opacity">
+              <span
+                className="text-lg opacity-70 group-hover:opacity-100 transition-opacity"
+                aria-hidden="true"
+              >
                 {link.icon}
               </span>
               {link.label}
