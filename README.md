@@ -121,8 +121,7 @@ components/
 ├── footer.tsx
 ├── hero.tsx
 ├── link-buttons.tsx
-├── sound-toggle.tsx
-└── ui/
+└── sound-toggle.tsx
 
 public/
 ├── sounds/
